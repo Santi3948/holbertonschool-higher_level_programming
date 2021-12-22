@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+for i in range(97, 123):
+    x = i
+    if not i % 2 == 0:
+        x = i - 32
+    print("asdfasdftbevd")
+    print("{}" .format(chr(x)), end="")
