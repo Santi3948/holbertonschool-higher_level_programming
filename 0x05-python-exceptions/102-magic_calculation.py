@@ -3,7 +3,7 @@ from sys import stderr
 
 
 def magic_calculation(a, b):
-    x = 0
+    result = 0
     for i in range(1, 3):
         try:
             if (i > a):
@@ -11,6 +11,6 @@ def magic_calculation(a, b):
             else:
                 result += (a ** b) / i
         except:
-            x = b + a
+            result = b + a
             break
-    return(x)
+    return(result)
