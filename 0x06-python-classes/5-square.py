@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""4AccessUpdatePrivateAttribute"""
+"""Printing a square"""
 
 
 class Square:
@@ -30,3 +30,15 @@ class Square:
     def area(self):
         """CalculatesTheAreaOfASquare"""
         return self.__size * self.__size
+
+    def my_print(self):
+        """PrintSquare"""
+        if self.__size == 0:
+            print()
+        else:
+            i = 0
+            j = 0
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end="")
+                print()
