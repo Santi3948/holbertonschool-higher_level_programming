@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""1. Square with size"""
+
+
 class Square:
-    def __init__(self, size):
+    """Class name: Square"""
+    def __init__(self, size=0):
+        """Constructor method"""
         self.__size = size
