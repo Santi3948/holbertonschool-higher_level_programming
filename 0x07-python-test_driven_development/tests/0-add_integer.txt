@@ -1,0 +1,35 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Test Add 2 numbers:
+>>> add_integer(1,2)
+3
+>>> add_integer(1.4,2.5)
+3
+>>> add_integer("srt",2)
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
+>>> add_integer("srt",2.7)
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
+>>> add_integer(2,"srt")
+Traceback (most recent call last):
+        ...
+TypeError: b must be an integer
+>>> add_integer("srt","srt")
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
+>>> add_integer(None,None)
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
+>>> add_integer("srt",2)
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
+>>> add_integer("srt",2)
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
