@@ -9,18 +9,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """constructor method"""
-        if not isinstance(height, int):
-            raise TypeError("height must be an integer")
-        elif height < 0:
-            raise ValueError("height must be >= 0")
-        else:
-            self.__height = height
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        elif width < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            self.__width = width
+        self.__height = height
+        self.__width = width
         type(self).number_of_instances += 1
 
     @property
@@ -92,5 +82,4 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """square method"""
-        if size >= 0:
-            return cls(size, size)
+        return cls(size, size)
