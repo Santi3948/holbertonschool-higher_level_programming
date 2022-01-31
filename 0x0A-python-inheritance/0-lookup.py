@@ -1,5 +1,13 @@
 #!/usr/bin/python3
-"""0. Lookup"""
+"""0. Lookup
+
+
+"""
+
+
 def lookup(obj):
-    """def lookup"""
+    """def lookup
+
+
+    """
     return list(dir(obj))
