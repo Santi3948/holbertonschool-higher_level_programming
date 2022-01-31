@@ -9,6 +9,9 @@ class MyList(list):
     MyList class
     """
     def print_sorted(self):
+        """
+        print sorted list
+        """
         for item in self:
             if type(item) != int:
                 raise TypeError("must be a list of integers")
