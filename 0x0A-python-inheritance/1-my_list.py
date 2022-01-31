@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""1. My list"""
-
-
-"""My list class"""
+"""
+1. My list
+"""
 
 
 class MyList(list):
-    """print sorted"""
+    """
+    MyList class
+    """
     def print_sorted(self):
         for item in self:
             if type(item) != int:
