@@ -1,6 +1,15 @@
 #!/usr/bin/python3
+"""9. Full rectangle
+
+
+"""
+
+
 class BaseGeometry:
-    """BaseGeometry class"""
+    """BaseGeometry class
+
+
+    """
 
     def area(self):
         raise Exception("area() is not implemented")
@@ -13,7 +22,10 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """class Rectangle"""
+    """class Rectangle
+
+
+    """
 
     def __init__(self, width, height):
         BaseGeometry.integer_validator(self, "width", width)

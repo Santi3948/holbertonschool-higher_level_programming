@@ -1,6 +1,15 @@
 #!/usr/bin/python3
+"""7. Integer validator
+
+
+"""
+
+
 class BaseGeometry:
-    """BaseGeometry class"""
+    """BaseGeometry class
+
+
+    """
 
     def area(self):
         raise Exception("area() is not implemented")

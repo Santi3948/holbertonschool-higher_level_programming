@@ -1,6 +1,15 @@
 #!/usr/bin/python3
+"""10. Square #1
+
+
+"""
+
+
 class BaseGeometry:
-    """BaseGeometry class"""
+    """BaseGeometry class
+
+
+    """
 
     def area(self):
         raise Exception("area() is not implemented")
@@ -13,11 +22,14 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """class Rectangle"""
+    """class Rectangle
+
+
+    """
 
     def __init__(self, width, height):
-        BaseGeometry.integer_validator(self, "width", width)
-        BaseGeometry.integer_validator(self, "height", height)
+        BaseGeometry.integer_validator("width", width)
+        BaseGeometry.integer_validator("height", height)
         self.__width = width
         self.__height = height
 
@@ -30,10 +42,13 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
-	"""class Square"""
+    """class Square
+
+
+    """
 
     def __init__(self, size):
-        super().integer_validator(self, "size", size)
+        super().integer_validator("size", size)
         self.__size = size
 
     def area(self):
