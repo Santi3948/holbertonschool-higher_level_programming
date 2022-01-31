@@ -28,5 +28,4 @@ class Square(Rectangle):
         """
         str
         """
-        string = "[Square] " + str(self.__width) + "/" + str(self.__height)
-        return string
+        return "[Square] {}/{}".format(self.__size, self.__size)
