@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """
-1. My list
-
-
+module with print_sorted
 """
 
 
@@ -12,9 +10,9 @@ class MyList(list):
     """
     def print_sorted(self):
         """
-        print sorted list
+        prints a sorted list
         """
         for item in self:
-            if type(item) != int:
-                raise TypeError("must be a list of integers")
+            if type(item) is not int:
+                raise TypeError("must be an integer")
         print(sorted(self))
