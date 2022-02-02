@@ -11,4 +11,9 @@ def pascal_triangle(n):
 	"""
     lis = []
     if n <= 0:
-        
+        return lis
+    lis_aux = [1]
+    lis.append(lis_aux)
+    if n = 1:
+        return lis
+    if 
