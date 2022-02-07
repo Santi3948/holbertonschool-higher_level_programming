@@ -11,22 +11,27 @@ class Rectangle(Base):
     """
     @property
     def width(self):
+        """width property"""
         return self.__width
 
     @property
     def height(self):
+        """height property"""
         return self.__height
 
     @property
     def x(self):
+        """x property"""
         return self.__x
 
     @property
     def y(self):
+        """y property"""
         return self.__y
 
     @width.setter
     def width(self, width):
+        """width.setter"""
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -35,6 +40,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
+        """height.setter"""
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
@@ -43,6 +49,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
+        """x.setter"""
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -71,6 +78,7 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self):
+        """display"""
         for w in range(self.__y):
             print()
         for i in range(self.__height):
@@ -81,10 +89,12 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """str function"""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} \
 - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
+        """update function"""
         if args:
             for i in range(len(args)):
                 if i == 0:
