@@ -119,3 +119,12 @@ class Rectangle(Base):
                     setattr(self, "x", value)
                 if key == "y":
                     setattr(self, "y", value)
+
+    def to_dictionary(self):
+        """to_dictionary doc"""
+        my_dict = {"id": self.id,
+                   "width": self.width,
+                   "height": self.height,
+                   "x": self.x,
+                   "y": self.y}
+        return my_dict
