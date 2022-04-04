@@ -1,5 +1,5 @@
 #!/usr/bin/node
-if (process.argv[2] && (process.argv[2] > 0)) {
+if (process.argv[2] && typeof parseInt(process.argv[2]) !== 'string' && (process.argv[2] > 0)) {
   for (let i = 0; i < process.argv[2]; i++) {
     let pr = '';
     for (let i = 0; i < process.argv[2]; i++) {
@@ -7,6 +7,6 @@ if (process.argv[2] && (process.argv[2] > 0)) {
     }
     console.log(pr);
   }
-} else if (!process.argv[2]) {
+} else {
   console.log('Missing size');
 }
