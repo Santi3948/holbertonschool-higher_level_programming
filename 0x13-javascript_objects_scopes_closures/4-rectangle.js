@@ -8,7 +8,7 @@ class Rectangle {
   }
 
   print (c) {
-    let cha = 'x';
+    let cha = 'X';
     if (c !== undefined) {
       cha = c;
     }
