@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""5. All cities by state
+"""
 import MySQLdb
 from sys import argv
 if __name__ == '__main__':
