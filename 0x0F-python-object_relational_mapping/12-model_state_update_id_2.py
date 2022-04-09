@@ -12,8 +12,6 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    New = State(name='Louisiana')
-    session.add(New)
     instance = session.query(State).filter(State.id.like('2')).first()
     instance.name = 'New Mexico'
 
