@@ -16,6 +16,6 @@ if __name__ == '__main__':
     if instance:
         print(f'{instance.id}')
     else:
-        print('Not Found')
+        print('Not found')
 
     session.close()
