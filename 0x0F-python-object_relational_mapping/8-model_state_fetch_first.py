@@ -15,5 +15,7 @@ if __name__ == '__main__':
     instance = session.query(State).first()
     if instance:
         print(f'{instance.id}: {instance.name}')
+    else:
+        print('Nothing')
 
     session.close()
