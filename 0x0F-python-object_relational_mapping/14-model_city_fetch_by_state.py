@@ -12,8 +12,9 @@ if __name__ == '__main__':
     engine = create_engine(eng_creation)
     Session = sessionmaker(bind=engine)
     session = Session()
+    a = session.query(City, State).filter(City.state_id == State.id)
 
-    for instance, j in session.query(City, State).filter(City.state_id == State.id).order_by(City.id):
+    for instance, j in a:
         print(f'{j.name}: ({instance.id}) {instance.name}')
 
     session.close()
