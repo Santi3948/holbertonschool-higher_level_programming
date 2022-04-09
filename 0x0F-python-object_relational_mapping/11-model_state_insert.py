@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Module for print states"""
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from sys import argv
@@ -14,9 +14,8 @@ if __name__ == '__main__':
 
     New = State(name='Louisiana')
     session.add(New)
-    instance = session.query(State).
-    filter(State.name.like('Louisiana')).first()
-    if instance:
-        print(f'{instance.id}')
+    inst = session.query(State).filter(State.name.like('Louisiana')).first()
+    if inst:
+        print(f'{inst.id}')
     session.commit()
     session.close()
