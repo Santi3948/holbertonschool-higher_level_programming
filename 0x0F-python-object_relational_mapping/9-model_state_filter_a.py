@@ -11,8 +11,9 @@ if __name__ == '__main__':
     engine = create_engine(eng_creation)
     Session = sessionmaker(bind=engine)
     session = Session()
+    xd = session.query(State).order_by(State.id).filter(State.name.like('%a%'))
 
-    for instance in session.query(State).order_by(State.id).filter(State.name.like('%a%')):
+    for instance in xd:
         print(f'{instance.id}: {instance.name}')
 
     session.close()

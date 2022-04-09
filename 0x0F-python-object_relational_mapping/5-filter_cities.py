@@ -17,3 +17,5 @@ if __name__ == '__main__':
                 print("{}, " .format(rows[row][0]), end="")
             elif(row >= 0):
                 print("{}" .format(rows[row][0]))
+        if not rows:
+            print()

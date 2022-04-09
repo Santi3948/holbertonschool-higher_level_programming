@@ -12,7 +12,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    instance =session.query(State).filter(State.name.like(argv[4])).first()
+    instance = session.query(State).filter(State.name.like(argv[4])).first()
     if instance:
         print(f'{instance.id}')
     else:
