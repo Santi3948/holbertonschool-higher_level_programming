@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""0. Get all states
+"""
 import MySQLdb
 from sys import argv
 if __name__ == '__main__':
