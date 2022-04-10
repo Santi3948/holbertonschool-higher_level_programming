@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 """Module for print states
 """
-
-
 from model_state import Base, State
 from model_city import City
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from sys import argv
-
+from sqlalchemy import (create_engine)
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
     eng_creation = f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}'
@@ -23,4 +20,6 @@ if __name__ == '__main__':
             if instance2.state_id == instance1.id:
                 print(f'    {instance2.id}: {instance2.name}')
 
+    session.close()
+    session.commit()
     session.close()
