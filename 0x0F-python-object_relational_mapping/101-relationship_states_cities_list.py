@@ -1,25 +1,21 @@
 #!/usr/bin/python3
-"""Module for print states
+"""Start link class to table in database
 """
-from model_state import Base, State
-from model_city import City
-from sys import argv
+import sys
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
+from relationship_state import Base, State
+from relationship_city import City
 
-if __name__ == '__main__':
-    eng_creation = f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}'
-    engine = create_engine(eng_creation)
-    Session = sessionmaker(bind=engine)
+
+if __name__ == "__main__":
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(engine)
     session = Session()
-    Statex = session.query(State).order_by(State.id)
-    Cityx = session.query(City).order_by(City.id)
-    for instance1 in Statex:
-        print(f'{instance1.id}: {instance1.name}')
-        for instance2 in Cityx:
-            if instance2.state_id == instance1.id:
-                print(f'    {instance2.id}: {instance2.name}')
-
-    session.close()
-    session.commit()
+    for state in session.query(State).order_by(State.id):
+        for city in state.cities:
+            print("{}: {} -> {}".format(city.id, city.name, state.name))
     session.close()
