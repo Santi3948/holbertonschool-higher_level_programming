@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""Start link class to table in database
 """
+16. List relationship
+"""
+
+
 import sys
 from relationship_state import Base, State
 from relationship_city import City
