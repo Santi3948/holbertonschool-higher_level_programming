@@ -10,7 +10,9 @@ axios.get(args[2])
         count = count + 1;
       }
       if (response.data[i].id % 20 === 0) {
-        dicc[response.data[i].userId] = count;
+        if (count > 0) {
+          dicc[response.data[i].userId] = count;
+        }
         count = 0;
       }
     }
